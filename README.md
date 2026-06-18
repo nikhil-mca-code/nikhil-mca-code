@@ -5,7 +5,7 @@
 ### Software Development Intern | Full-Stack Developer | Founder @ Gorakhpur Web Studio
 
 ![](https://komarev.com/ghpvc/?username=nikhil-mca-code\&color=blueviolet\&style=for-the-badge)
-[![Website](https://img.shields.io/badge/Website-Nikhil%20Portfolio-0A66C2?style=for-the-badge&logo=google-chrome)](https://nikhil-in.netlify.app/)
+[![Website](https://img.shields.io/badge/Website-Nikhil%20Portfolio-0A66C2?style=for-the-badge&logo=google-chrome)](https://nikhil-index.netlify.app/)
 
 </div>
 
