@@ -253,7 +253,7 @@ https://amzn.in/d/0j6DpKNp
 
 [![Website](https://img.shields.io/badge/Website-Gorakhpur%20Web%20Studio-success?style=for-the-badge\&logo=google-chrome)](https://gorakhpurwebstudio.in/)
 
-[![Instagram](https://img.shields.io/badge/Instagram-@_proxy.nikhil-E4405F?style=for-the-badge\&logo=instagram\&logoColor=white)](https://www.instagram.com/proxy.nikhil/)
+[![Instagram](https://img.shields.io/badge/Instagram-@proxy.nikhil-E4405F?style=for-the-badge\&logo=instagram\&logoColor=white)](https://www.instagram.com/proxy.nikhil/)
 
 [![GitHub](https://img.shields.io/badge/GitHub-nikhil--mca--code-black?style=for-the-badge\&logo=github)](https://github.com/nikhil-mca-code)
 
