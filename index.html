@@ -388,8 +388,23 @@
           <p>A few systems I have built and shipped. Each card is structured to accept future screenshots cleanly.</p>
         </div>
 
-        <div class="project-list">
-          <article class="project-card" aria-labelledby="project-class-orbit-title">
+        <div class="project-carousel" data-project-carousel>
+          <div class="project-carousel-controls" aria-label="Project carousel controls">
+            <button class="carousel-button" type="button" data-carousel-prev aria-label="Previous project">
+              <span aria-hidden="true">&larr;</span>
+            </button>
+
+            <div class="carousel-dots" data-carousel-dots aria-label="Project pagination"></div>
+
+            <button class="carousel-button" type="button" data-carousel-next aria-label="Next project">
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+
+          <div class="project-list" id="projectCarousel" tabindex="0" aria-roledescription="carousel"
+            aria-label="Selected projects">
+          <article class="project-card" data-carousel-slide aria-roledescription="slide"
+            aria-label="Project 1 of 4: Class Orbit" aria-labelledby="project-class-orbit-title">
             <div class="project-head">
               <span class="method get">GET</span>
               <span class="endpoint-path">/projects/class-orbit</span>
@@ -452,7 +467,8 @@
             </div>
           </article>
 
-          <article class="project-card" aria-labelledby="project-tailor-title">
+          <article class="project-card" data-carousel-slide aria-roledescription="slide"
+            aria-label="Project 2 of 4: Maa Ladies Tailor - Website" aria-labelledby="project-tailor-title">
             <div class="project-head">
               <span class="method get">GET</span>
               <span class="endpoint-path">/clients/maa-ladies-tailor</span>
@@ -513,7 +529,8 @@
             </div>
           </article>
 
-          <article class="project-card" aria-labelledby="project-studio-title">
+          <article class="project-card" data-carousel-slide aria-roledescription="slide"
+            aria-label="Project 3 of 4: Gorakhpur Web Studio" aria-labelledby="project-studio-title">
             <div class="project-head">
               <span class="method post">POST</span>
               <span class="endpoint-path">/studio/clients</span>
@@ -575,7 +592,8 @@
             </div>
           </article>
 
-          <article class="project-card" aria-labelledby="project-exam-title">
+          <article class="project-card" data-carousel-slide aria-roledescription="slide"
+            aria-label="Project 4 of 4: Exam Center Help" aria-labelledby="project-exam-title">
             <div class="project-head">
               <span class="method get">GET</span>
               <span class="endpoint-path">/exam-centers/locator</span>
@@ -636,6 +654,7 @@
               </figure>
             </div>
           </article>
+          </div>
         </div>
       </div>
     </section>

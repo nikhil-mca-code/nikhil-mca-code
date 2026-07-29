@@ -14,6 +14,7 @@ const sectionTargets = sectionNavLinks
 let lockedScrollbarWidth = 0;
 let activeSyncFrame = 0;
 let activeSectionId = '';
+const projectCarousel = document.querySelector('[data-project-carousel]');
 
 // Mobile menu
 function lockBodyScroll() {
@@ -193,6 +194,227 @@ if ('IntersectionObserver' in window && sectionTargets.length) {
   sectionTargets.forEach((section) => sectionObserver.observe(section));
 } else {
   queueActiveNavSync();
+}
+
+// Projects carousel
+if (projectCarousel) {
+  const projectViewport = document.getElementById('projectCarousel');
+  const projectSlides = Array.from(projectViewport.querySelectorAll('[data-carousel-slide]'));
+  const projectPrevButton = projectCarousel.querySelector('[data-carousel-prev]');
+  const projectNextButton = projectCarousel.querySelector('[data-carousel-next]');
+  const projectDots = projectCarousel.querySelector('[data-carousel-dots]');
+  const projectState = {
+    activeIndex: 0,
+    rafId: 0,
+    dragging: null,
+    suppressClick: false,
+  };
+
+  function clampProjectIndex(index) {
+    return Math.min(Math.max(index, 0), projectSlides.length - 1);
+  }
+
+  function buildProjectDots() {
+    projectDots.innerHTML = '';
+
+    projectSlides.forEach((slide, index) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'carousel-dot';
+      dot.setAttribute('aria-label', `Go to project ${index + 1} of ${projectSlides.length}`);
+      dot.addEventListener('click', () => scrollToProject(index));
+      projectDots.appendChild(dot);
+    });
+  }
+
+  function setProjectState(index) {
+    const nextIndex = clampProjectIndex(index);
+    projectState.activeIndex = nextIndex;
+
+    projectSlides.forEach((slide, slideIndex) => {
+      slide.classList.toggle('is-active', slideIndex === nextIndex);
+    });
+
+    Array.from(projectDots.children).forEach((dot, dotIndex) => {
+      if (dotIndex === nextIndex) {
+        dot.setAttribute('aria-current', 'true');
+      } else {
+        dot.removeAttribute('aria-current');
+      }
+    });
+
+    projectPrevButton.disabled = nextIndex === 0;
+    projectNextButton.disabled = nextIndex === projectSlides.length - 1;
+  }
+
+  function getProjectTargetLeft(index) {
+    return projectSlides[clampProjectIndex(index)]?.offsetLeft || 0;
+  }
+
+  function scrollToProject(index, behavior = reduceMotion ? 'auto' : 'smooth') {
+    const nextIndex = clampProjectIndex(index);
+    projectViewport.scrollTo({
+      left: getProjectTargetLeft(nextIndex),
+      behavior,
+    });
+    setProjectState(nextIndex);
+  }
+
+  function getClosestProjectIndex() {
+    const viewportCenter = projectViewport.scrollLeft + projectViewport.clientWidth / 2;
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    projectSlides.forEach((slide, index) => {
+      const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+      const distance = Math.abs(slideCenter - viewportCenter);
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    return closestIndex;
+  }
+
+  function syncProjectState() {
+    setProjectState(getClosestProjectIndex());
+  }
+
+  function queueProjectSync() {
+    if (projectState.rafId) {
+      return;
+    }
+
+    projectState.rafId = window.requestAnimationFrame(() => {
+      projectState.rafId = 0;
+      syncProjectState();
+    });
+  }
+
+  function endProjectDrag() {
+    if (!projectState.dragging) {
+      return;
+    }
+
+    const shouldSnap = projectState.dragging.isHorizontal;
+    const pointerId = projectState.dragging.pointerId;
+    projectState.dragging = null;
+    projectViewport.classList.remove('is-dragging');
+
+    try {
+      projectViewport.releasePointerCapture(pointerId);
+    } catch {
+      // Pointer capture may already be released.
+    }
+
+    if (shouldSnap) {
+      scrollToProject(getClosestProjectIndex());
+    }
+
+    window.setTimeout(() => {
+      projectState.suppressClick = false;
+    }, 0);
+  }
+
+  buildProjectDots();
+  syncProjectState();
+
+  projectPrevButton.addEventListener('click', () => {
+    scrollToProject(projectState.activeIndex - 1);
+  });
+
+  projectNextButton.addEventListener('click', () => {
+    scrollToProject(projectState.activeIndex + 1);
+  });
+
+  projectViewport.addEventListener('scroll', queueProjectSync, { passive: true });
+
+  projectViewport.addEventListener('keydown', (event) => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') {
+      return;
+    }
+
+    event.preventDefault();
+
+    if (event.key === 'ArrowLeft') {
+      scrollToProject(projectState.activeIndex - 1);
+    } else {
+      scrollToProject(projectState.activeIndex + 1);
+    }
+  });
+
+  projectViewport.addEventListener('pointerdown', (event) => {
+    if (event.button !== 0 && event.pointerType === 'mouse') {
+      return;
+    }
+
+    projectState.suppressClick = false;
+    projectState.dragging = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      startScrollLeft: projectViewport.scrollLeft,
+      isHorizontal: false,
+    };
+
+    try {
+      projectViewport.setPointerCapture(event.pointerId);
+    } catch {
+      // Pointer capture is best effort.
+    }
+  });
+
+  projectViewport.addEventListener('pointermove', (event) => {
+    if (!projectState.dragging || event.pointerId !== projectState.dragging.pointerId) {
+      return;
+    }
+
+    const deltaX = event.clientX - projectState.dragging.startX;
+    const deltaY = event.clientY - projectState.dragging.startY;
+
+    if (!projectState.dragging.isHorizontal) {
+      if (Math.abs(deltaX) < 6 && Math.abs(deltaY) < 6) {
+        return;
+      }
+
+      if (Math.abs(deltaX) <= Math.abs(deltaY)) {
+        projectState.dragging = null;
+        return;
+      }
+
+      projectState.dragging.isHorizontal = true;
+      projectViewport.classList.add('is-dragging');
+    }
+
+    event.preventDefault();
+    projectState.suppressClick = true;
+    projectViewport.scrollLeft = projectState.dragging.startScrollLeft - deltaX;
+    queueProjectSync();
+  });
+
+  projectViewport.addEventListener('pointerup', endProjectDrag);
+  projectViewport.addEventListener('pointercancel', endProjectDrag);
+
+  projectViewport.addEventListener('click', (event) => {
+    if (!projectState.suppressClick) {
+      return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+    projectState.suppressClick = false;
+  }, true);
+
+  window.addEventListener('resize', () => {
+    scrollToProject(projectState.activeIndex, 'auto');
+    queueProjectSync();
+  });
+
+  window.addEventListener('load', () => {
+    scrollToProject(projectState.activeIndex, 'auto');
+  });
 }
 
 // Animations

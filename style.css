@@ -9,7 +9,7 @@
   --text: #e5eef8;
   --text-dim: #93a4bb;
   --muted: #6b7a90;
-  --green: #4ade80;
+  --green: #02d550;
   --green-soft: rgba(74, 222, 128, 0.14);
   --blue: #60a5fa;
   --blue-soft: rgba(96, 165, 250, 0.14);
@@ -637,14 +637,115 @@ section {
 }
 
 /* Projects */
-.project-list,
-.changelog {
+.project-carousel {
   display: grid;
-  gap: 1.1rem;
+  gap: 1rem;
+}
+
+.project-carousel-controls {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.carousel-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  box-shadow: 0 12px 28px -20px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.carousel-button:hover:not(:disabled),
+.carousel-button:focus-visible:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: rgba(74, 222, 128, 0.32);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 16px 36px -22px rgba(0, 0, 0, 0.92),
+    0 0 0 1px rgba(74, 222, 128, 0.12);
+}
+
+.carousel-button:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.carousel-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.38);
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carousel-dot:hover,
+.carousel-dot:focus-visible {
+  transform: scale(1.08);
+  border-color: rgba(74, 222, 128, 0.45);
+}
+
+.carousel-dot[aria-current="true"] {
+  background: var(--green);
+  border-color: rgba(74, 222, 128, 0.7);
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.08);
+  transform: scale(1.12);
+}
+
+.project-list {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0 0 0.25rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: contain;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.project-list::-webkit-scrollbar {
+  display: none;
+}
+
+.project-list.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc((100% - 1rem) / 2);
+  min-width: 0;
+  height: 100%;
   overflow: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 }
 
@@ -672,11 +773,60 @@ section {
   opacity: 1;
 }
 
+.project-card.is-active {
+  transform: scale(1.02);
+  border-color: rgba(74, 222, 128, 0.42);
+  box-shadow:
+    0 34px 88px -44px rgba(0, 0, 0, 0.98),
+    0 0 0 1px rgba(74, 222, 128, 0.2),
+    0 0 0 6px rgba(74, 222, 128, 0.05);
+}
+
+.project-card.is-active:hover {
+  transform: scale(1.02) translateY(-3px);
+}
+
+.project-card.is-active .project-preview {
+  border-color: rgba(74, 222, 128, 0.3);
+  box-shadow:
+    0 28px 54px -34px rgba(0, 0, 0, 0.96),
+    0 0 0 1px rgba(74, 222, 128, 0.2);
+}
+
 .project-card:focus-within {
   border-color: rgba(74, 222, 128, 0.38);
   box-shadow:
     0 28px 70px -42px rgba(0, 0, 0, 0.95),
     0 0 0 1px rgba(74, 222, 128, 0.18);
+}
+
+@media (max-width: 1100px) {
+  .project-card {
+    flex-basis: calc((100% - 1rem) / 1.5);
+  }
+}
+
+@media (max-width: 767px) {
+  .project-card {
+    flex-basis: calc(100% - 2rem);
+  }
+
+  .carousel-button {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-list {
+    scroll-behavior: auto;
+  }
+
+  .project-card,
+  .carousel-button,
+  .carousel-dot {
+    transition-duration: 0.01ms;
+  }
 }
 
 .project-head {
@@ -736,6 +886,7 @@ section {
   gap: 1.15rem;
   padding: 1.15rem;
   align-items: start;
+  flex: 1;
 }
 
 .project-copy h3 {
