@@ -1112,7 +1112,7 @@ a:focus-visible {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .site-nav {
     position: relative;
   }
@@ -1130,21 +1130,24 @@ a:focus-visible {
 
   .js .nav-links {
     position: absolute;
-    top: calc(100% + 0.75rem);
-    left: 0;
+    top: calc(100% + 12px);
     right: 0;
+    left: auto;
+    width: min(340px, calc(100vw - 2rem));
     display: grid;
-    gap: 0.35rem;
-    padding: 0.8rem;
-    border-radius: 1rem;
-    background: rgba(6, 10, 19, 0.98);
-    border: 1px solid var(--border);
-    box-shadow: 0 24px 60px -36px rgba(0, 0, 0, 0.9);
+    gap: 14px;
+    padding: 20px;
+    border-radius: 18px;
+    background: #08101a;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    box-shadow: 0 22px 48px -28px rgba(0, 0, 0, 0.92);
+    backdrop-filter: none;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-0.5rem);
+    transform: translateY(-10px);
     pointer-events: none;
-    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+    transition: opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
+    z-index: 240;
   }
 
   .js .nav-links[data-open="true"] {
@@ -1157,8 +1160,14 @@ a:focus-visible {
   .nav-links a {
     width: 100%;
     justify-content: flex-start;
-    min-height: 3rem;
-    padding-inline: 1rem;
+    min-height: 44px;
+    padding: 0.8rem 0.95rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.05);
   }
 
   .endpoint-status {
@@ -1167,6 +1176,16 @@ a:focus-visible {
 
   .project-metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .js .nav-links {
+    width: min(300px, calc(100vw - 1.25rem));
+  }
+
+  .nav-links a {
+    padding: 0.82rem 0.95rem;
   }
 }
 

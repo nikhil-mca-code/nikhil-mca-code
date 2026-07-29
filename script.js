@@ -6,13 +6,50 @@ const terminalBody = document.getElementById('terminalBody');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const prefersReducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 const revealTargets = document.querySelectorAll('[data-reveal]');
+let lockedScrollY = 0;
+let lockedScrollbarWidth = 0;
+
+function lockBodyScroll() {
+  lockedScrollY = window.scrollY || window.pageYOffset || 0;
+  lockedScrollbarWidth = Math.max(0, window.innerWidth - document.documentElement.clientWidth);
+
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${lockedScrollY}px`;
+  document.body.style.left = '0';
+  document.body.style.right = '0';
+  document.body.style.width = '100%';
+
+  if (lockedScrollbarWidth > 0) {
+    document.body.style.paddingRight = `${lockedScrollbarWidth}px`;
+  }
+}
+
+function unlockBodyScroll() {
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.right = '';
+  document.body.style.width = '';
+  document.body.style.paddingRight = '';
+  window.scrollTo(0, lockedScrollY);
+}
 
 function setNavState(isOpen) {
   navLinks.dataset.open = String(isOpen);
   navToggle.setAttribute('aria-expanded', String(isOpen));
+
+  if (isOpen && window.innerWidth <= 1024) {
+    lockBodyScroll();
+  } else {
+    unlockBodyScroll();
+  }
 }
 
 function closeNav() {
+  if (navLinks.dataset.open !== 'true') {
+    return;
+  }
+
   setNavState(false);
 }
 
@@ -44,7 +81,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 860) {
+  if (window.innerWidth > 1024) {
     closeNav();
   }
 });
