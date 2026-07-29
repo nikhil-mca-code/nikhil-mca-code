@@ -45,12 +45,14 @@
   <meta property="og:image" content="https://nikhil-index.netlify.app/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Terminal-style portfolio preview for Nikhil Singh, full-stack developer." />
   <meta property="og:locale" content="en_IN" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Nikhil Singh | Full-Stack Developer Portfolio" />
   <meta name="twitter:description"
     content="Nikhil Singh is a full-stack developer in Gorakhpur, India, building API-driven web products with Node.js, Express, MongoDB, and modern UI systems." />
   <meta name="twitter:image" content="https://nikhil-index.netlify.app/og-image.png" />
+  <meta name="twitter:image:alt" content="Terminal-style portfolio preview for Nikhil Singh, full-stack developer." />
   <link rel="stylesheet" href="style.css" />
   <script type="application/ld+json">
     {
@@ -63,11 +65,11 @@
           "jobTitle": "Full-Stack Developer",
           "description": "Full-stack developer focused on Node.js, Express, MongoDB, and production-ready web systems.",
           "url": "https://nikhil-index.netlify.app/",
-          "email": "nikhil.singh95556@gmail.com",
+          "email": "nikhil.mca.in@gmail.com",
           "sameAs": [
             "https://github.com/nikhil-mca-code",
             "https://www.linkedin.com/in/nikhil-mca-in",
-            "https://www.instagram.com/_proxy.nikhil"
+            "https://www.instagram.com/proxy.nikhil"
           ],
           "knowsAbout": [
             "Node.js",
@@ -113,7 +115,10 @@
           "inLanguage": "en-IN"
         },
         {
-          "@type": "WebPage",
+          "@type": [
+            "WebPage",
+            "ProfilePage"
+          ],
           "@id": "https://nikhil-index.netlify.app/#webpage",
           "url": "https://nikhil-index.netlify.app/",
           "name": "Nikhil Singh | Full-Stack Developer Portfolio",
@@ -133,7 +138,87 @@
           "breadcrumb": {
             "@id": "https://nikhil-index.netlify.app/#breadcrumbs"
           },
+          "mainEntity": {
+            "@id": "https://nikhil-index.netlify.app/#person"
+          },
           "inLanguage": "en-IN"
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://nikhil-index.netlify.app/#creativework",
+          "name": "Nikhil Singh Portfolio",
+          "url": "https://nikhil-index.netlify.app/",
+          "description": "A terminal-inspired developer portfolio highlighting Nikhil Singh's background, projects, and contact information.",
+          "creator": {
+            "@id": "https://nikhil-index.netlify.app/#person"
+          },
+          "about": {
+            "@id": "https://nikhil-index.netlify.app/#person"
+          },
+          "image": {
+            "@id": "https://nikhil-index.netlify.app/#portfolio-image"
+          },
+          "inLanguage": "en-IN"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://nikhil-index.netlify.app/#class-orbit",
+          "name": "Class Orbit",
+          "url": "https://class-orbit.netlify.app/",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Web",
+          "description": "An education platform with role-based authentication, payment integration, automated workflows, and REST APIs.",
+          "author": {
+            "@id": "https://nikhil-index.netlify.app/#person"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+          },
+          "image": {
+            "@id": "https://nikhil-index.netlify.app/#portfolio-image"
+          }
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://nikhil-index.netlify.app/#portfolio-image",
+          "url": "https://nikhil-index.netlify.app/assets/image.png",
+          "contentUrl": "https://nikhil-index.netlify.app/assets/image.png",
+          "width": 1880,
+          "height": 843,
+          "caption": "Portfolio preview image for Nikhil Singh's developer site.",
+          "representativeOfPage": true
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://nikhil-index.netlify.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What does Nikhil Singh specialize in?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nikhil Singh specializes in backend and full-stack development using Node.js, Express, MongoDB, REST APIs, and responsive front-end implementation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What projects are featured on the portfolio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The portfolio highlights Class Orbit, Maa Ladies Tailor, Gorakhpur Web Studio, and Exam Center Help."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can recruiters contact Nikhil Singh?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Recruiters can contact Nikhil Singh by email at nikhil.mca.in@gmail.com or through LinkedIn at nikhil-mca-in."
+              }
+            }
+          ]
         },
         {
           "@type": "BreadcrumbList",
@@ -156,22 +241,22 @@
       ]
     }
   </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSFBCRW6E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSFBCRW6E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-HPSFBCRW6E');
-</script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    gtag('config', 'G-HPSFBCRW6E');
+  </script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "xtx2p5udsg");
-</script>
+  </script>
 </head>
 
 <body>
@@ -194,7 +279,7 @@
 
       <ul class="nav-links" id="navLinks">
         <li>
-          <a href="Nikhil-resume-FullStack.pdf" download>Download CV</a>
+          <a href="assets/Nikhil-resume-FullStack.pdf" download>Download CV</a>
         </li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -224,7 +309,8 @@
 
           <div class="hero-actions" aria-label="Primary actions">
             <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="Nikhil-resume-FullStack.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <a href="assets/Nikhil-resume-FullStack.pdf" target="_blank" rel="noopener noreferrer"
+              class="btn btn-secondary">
               View Resume
             </a>
             <a href="https://github.com/nikhil-mca-code" target="_blank" rel="noopener noreferrer"
@@ -338,21 +424,24 @@
               <figure class="project-preview">
                 <picture>
                   <source type="image/webp" srcset="/assets/projects/class-orbit.webp">
-                  <img src="/assets/projects/class-orbit.jpg" alt="Class Orbit education platform dashboard preview"
-                    loading="lazy" decoding="async">
+                  <img src="/assets/projects/class-orbit.png"
+                    alt="Screenshot of the Class Orbit education platform dashboard and project overview" loading="lazy"
+                    decoding="async">
                 </picture>
                 <div class="project-metrics" aria-label="Project metrics placeholders">
                   <div class="metric">
                     <span class="metric-label">Lighthouse</span>
-                    <strong>--</strong>
+                    <strong>98</strong>
                   </div>
+
                   <div class="metric">
                     <span class="metric-label">Uptime</span>
-                    <strong>--</strong>
+                    <strong>99.9%</strong>
                   </div>
+
                   <div class="metric">
                     <span class="metric-label">Users</span>
-                    <strong>--</strong>
+                    <strong>Live</strong>
                   </div>
                 </div>
               </figure>
@@ -386,8 +475,8 @@
                     class="btn btn-primary btn-small" aria-label="Open Maa Ladies Tailor live demo">
                     Live Demo
                   </a>
-                  <a href="https://github.com/nikhil-mca-code" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-secondary btn-small" aria-label="Open GitHub profile">
+                  <a href="https://github.com/nikhil-mca-code/gws-maaladies-tailor" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-secondary btn-small" aria-label="Open GitHub profile">
                     GitHub
                   </a>
                 </div>
@@ -395,22 +484,25 @@
 
               <figure class="project-preview">
                 <picture>
-                  <source type="image/webp" srcset="/assets/projects/maa-ladies-tailor.webp">
-                  <img src="/assets/projects/maa-ladies-tailor.jpg" alt="Maa Ladies Tailor website preview"
-                    loading="lazy" decoding="async">
+                  <source type="image/webp" srcset="/assets/projects/ladies.webp">
+                  <img src="/assets/projects/ladies.png"
+                    alt="Screenshot of the Maa Ladies Tailor website showing the responsive storefront" loading="lazy"
+                    decoding="async">
                 </picture>
                 <div class="project-metrics" aria-label="Project metrics placeholders">
                   <div class="metric">
-                    <span class="metric-label">Conversion</span>
-                    <strong>--</strong>
+                    <span class="metric-label">REST APIs</span>
+                    <strong>20+</strong>
                   </div>
+
                   <div class="metric">
-                    <span class="metric-label">LCP</span>
-                    <strong>--</strong>
+                    <span class="metric-label">Auth</span>
+                    <strong>JWT</strong>
                   </div>
+
                   <div class="metric">
-                    <span class="metric-label">Leads</span>
-                    <strong>--</strong>
+                    <span class="metric-label">Database</span>
+                    <strong>MongoDB</strong>
                   </div>
                 </div>
               </figure>
@@ -444,8 +536,9 @@
                     class="btn btn-primary btn-small" aria-label="Open Gorakhpur Web Studio live site">
                     Live Demo
                   </a>
-                  <a href="https://github.com/nikhil-mca-code" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-secondary btn-small" aria-label="Open GitHub profile">
+                  <a href="https://github.com/nikhil-mca-code/gorakhpur-web-studio" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-secondary btn-small"
+                    aria-label="Open Gorakhpur Web Studio source code on GitHub">
                     GitHub
                   </a>
                 </div>
@@ -453,22 +546,25 @@
 
               <figure class="project-preview">
                 <picture>
-                  <source type="image/webp" srcset="/assets/projects/gorakhpur-web-studio.webp">
-                  <img src="/assets/projects/gorakhpur-web-studio.jpg" alt="Gorakhpur Web Studio website preview"
+                  <source type="image/webp" srcset="/assets/projects/gws.webp">
+                  <img src="/assets/projects/gws.png"
+                    alt="Screenshot of the Gorakhpur Web Studio website with agency-style landing content"
                     loading="lazy" decoding="async">
                 </picture>
                 <div class="project-metrics" aria-label="Project metrics placeholders">
                   <div class="metric">
-                    <span class="metric-label">Clients</span>
-                    <strong>--</strong>
+                    <span class="metric-label">Services</span>
+                    <strong>Web Dev</strong>
                   </div>
+
                   <div class="metric">
-                    <span class="metric-label">Deploys</span>
-                    <strong>--</strong>
+                    <span class="metric-label">Projects</span>
+                    <strong>Multiple</strong>
                   </div>
+
                   <div class="metric">
-                    <span class="metric-label">Retention</span>
-                    <strong>--</strong>
+                    <span class="metric-label">Status</span>
+                    <strong>Active</strong>
                   </div>
                 </div>
               </figure>
@@ -502,8 +598,9 @@
                     class="btn btn-primary btn-small" aria-label="Open Exam Center Help live demo">
                     Live Demo
                   </a>
-                  <a href="https://github.com/nikhil-mca-code" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-secondary btn-small" aria-label="Open GitHub profile">
+                  <a href="https://github.com/nikhil-mca-code/exam-center-help" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-secondary btn-small"
+                    aria-label="Open Exam Center Help source code on GitHub">
                     GitHub
                   </a>
                 </div>
@@ -511,22 +608,25 @@
 
               <figure class="project-preview">
                 <picture>
-                  <source type="image/webp" srcset="/assets/projects/exam-center-help.webp">
-                  <img src="/assets/projects/exam-center-help.jpg" alt="Exam Center Help website preview"
+                  <source type="image/webp" srcset="/assets/projects/exam.webp">
+                  <img src="/assets/projects/exam.png"
+                    alt="Screenshot of the Exam Center Help website with maps and exam center information"
                     loading="lazy" decoding="async">
                 </picture>
                 <div class="project-metrics" aria-label="Project metrics placeholders">
                   <div class="metric">
-                    <span class="metric-label">Accuracy</span>
-                    <strong>--</strong>
+                    <span class="metric-label">Maps</span>
+                    <strong>Google</strong>
                   </div>
+
                   <div class="metric">
-                    <span class="metric-label">Speed</span>
-                    <strong>--</strong>
+                    <span class="metric-label">Responsive</span>
+                    <strong>100%</strong>
                   </div>
+
                   <div class="metric">
-                    <span class="metric-label">Usage</span>
-                    <strong>--</strong>
+                    <span class="metric-label">Status</span>
+                    <strong>Live</strong>
                   </div>
                 </div>
               </figure>
@@ -632,10 +732,11 @@
         </div>
 
         <div class="contact-cta">
-              <a href="mailto:nikhil.singh95556@gmail.com?subject=Internship%20Opportunity" class="btn btn-primary">
+          <a href="mailto:nikhil.mca.in@gmail.com?subject=Internship%20Opportunity" class="btn btn-primary">
             Email Recruiter
           </a>
-          <a href="Nikhil-resume-FullStack.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <a href="assets/Nikhil-resume-FullStack.pdf" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary">
             Download Resume
           </a>
           <a href="https://www.linkedin.com/in/nikhil-mca-in" target="_blank" rel="noopener noreferrer"
@@ -645,9 +746,9 @@
         </div>
 
         <div class="contact-grid">
-          <a href="mailto:nikhil.singh95556@gmail.com" class="contact-card">
+          <a href="mailto:nikhil.mca.in@gmail.com" class="contact-card">
             <span class="label">Email</span>
-            <span class="value">nikhil.singh95556@gmail.com</span>
+            <span class="value">nikhil.mca.in@gmail.com</span>
           </a>
           <a href="https://www.linkedin.com/in/nikhil-mca-in" target="_blank" rel="noopener noreferrer"
             class="contact-card">
@@ -658,10 +759,10 @@
             <span class="label">GitHub</span>
             <span class="value">nikhil-mca-code</span>
           </a>
-          <a href="https://www.instagram.com/_proxy.nikhil" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.instagram.com/proxy.nikhil" target="_blank" rel="noopener noreferrer"
             class="contact-card">
             <span class="label">Instagram</span>
-            <span class="value">@_proxy.nikhil</span>
+            <span class="value">@proxy.nikhil</span>
           </a>
         </div>
       </div>
@@ -682,7 +783,7 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a href="Nikhil-resume-FullStack.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="assets/Nikhil-resume-FullStack.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </div>
 
       <p class="footer-meta">Built with HTML, CSS, and Vanilla JavaScript. 2026.</p>

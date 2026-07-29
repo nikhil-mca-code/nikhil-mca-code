@@ -1,0 +1,40 @@
+Nikhil Singh Portfolio
+
+Canonical: https://nikhil-index.netlify.app/
+Description: Terminal-inspired portfolio for Nikhil Singh, a full-stack developer in Gorakhpur, India. The site highlights backend development, production web systems, selected projects, experience, education, and contact information.
+
+Primary topics:
+- Full-stack development
+- Backend engineering
+- Node.js, Express, MongoDB
+- REST APIs
+- Responsive web design
+- Portfolio and client work
+
+Key pages and assets:
+- Home: https://nikhil-index.netlify.app/
+- Resume: https://nikhil-index.netlify.app/assets/Nikhil-resume-FullStack.pdf
+- GitHub: https://github.com/nikhil-mca-code
+- LinkedIn: https://www.linkedin.com/in/nikhil-mca-in
+- Email: nikhil.mca.in@gmail.com
+
+Featured work:
+- Class Orbit: https://class-orbit.netlify.app/
+- Maa Ladies Tailor: https://maaladiestailor.in/
+- Gorakhpur Web Studio: https://gorakhpurwebstudio.in/
+- Exam Center Help: https://examcenterhelp.netlify.app/
+
+Structured data on the site:
+- Person
+- ProfilePage
+- WebSite
+- CreativeWork
+- SoftwareApplication
+- ImageObject
+- FAQPage
+- BreadcrumbList
+
+Notes:
+- This site is static HTML, CSS, and Vanilla JavaScript.
+- Crawlable content is in the HTML document.
+- Social preview image: https://nikhil-index.netlify.app/og-image.png
