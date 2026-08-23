@@ -2,7 +2,7 @@
 
 <div align="center">
 
-### Software Development Intern | Full-Stack Developer | Founder @ Gorakhpur Web Studio
+### MCA Student @ G.L. Bajaj | Full-Stack Developer | Founder @ Gorakhpur Web Studio
 
 ![](https://komarev.com/ghpvc/?username=nikhil-mca-code\&color=blueviolet\&style=for-the-badge)
 [![Website](https://img.shields.io/badge/Website-Nikhil%20Portfolio-0A66C2?style=for-the-badge&logo=google-chrome)](https://nikhil-index.netlify.app/)
@@ -13,15 +13,11 @@
 
 ## 🚀 About Me
 
-🎓 B.Sc. Mathematics & Computer Applications Student
-
-💻 Passionate about Software Development, Full-Stack Applications, and Automation Systems
-
+🎓 MCA Student @ G.L. Bajaj
+💻 Full-Stack Developer
 🚀 Founder of Gorakhpur Web Studio
-
-🌱 Currently learning React.js, Backend Engineering, and Modern Software Development
-
-📍 Gorakhpur, Uttar Pradesh, India
+🌱 Currently learning React.js and improving backend development
+📍 India
 
 ---
 
@@ -29,17 +25,14 @@
 
 I enjoy building practical technology solutions that solve real-world problems.
 
-My journey started with Arduino and Embedded Systems projects and evolved into Full-Stack Web Development, Automation Platforms, and Software Engineering.
+I started with Arduino and embedded systems projects and later moved into full-stack web development and automation.
 
 ### Areas of Interest
 
-* Full-Stack Development
-* Software Engineering
-* Backend Development
-* Artificial Intelligence
-* Automation Systems
-* Embedded Systems
-* Real-World Problem Solving
+*Full-Stack Development
+*Backend Development
+*Software Engineering
+*Automation
 
 ---
 
@@ -239,11 +232,11 @@ https://amzn.in/d/0j6DpKNp
 
 # 🎯 Goals
 
-* Build production-grade Full-Stack Applications
-* Contribute to Open Source Projects
-* Secure a Software Development Internship
-* Pursue MCA
-* Create impactful technology solutions
+*Build production-grade full-stack applications
+*Contribute to open-source projects
+*Secure a software development internship
+*Build and ship useful products
+*Improve my software engineering skills
 
 ---
 
