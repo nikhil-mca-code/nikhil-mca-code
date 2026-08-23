@@ -29,10 +29,10 @@ I started with Arduino and embedded systems projects and later moved into full-s
 
 ### Areas of Interest
 
-*Full-Stack Development
-*Backend Development
-*Software Engineering
-*Automation
+Full-Stack Development
+Backend Development
+Software Engineering
+Automation
 
 ---
 
@@ -226,17 +226,21 @@ https://amzn.in/d/0j6DpKNp
 
 ![Software Engineering](https://img.shields.io/badge/Software-Engineering-blue?style=for-the-badge)
 
-![MCA](https://img.shields.io/badge/MCA-Preparation-orange?style=for-the-badge)
+![MCA](https://img.shields.io/badge/MCA-Student-orange?style=for-the-badge)
 
 ---
 
 # 🎯 Goals
 
-*Build production-grade full-stack applications
-*Contribute to open-source projects
-*Secure a software development internship
-*Build and ship useful products
-*Improve my software engineering skills
+Build production-grade full-stack applications
+
+Contribute to open-source projects
+
+Secure a software development internship
+
+Build and ship useful products
+
+Improve my software engineering skills
 
 ---
 
