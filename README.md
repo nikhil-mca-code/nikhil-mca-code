@@ -98,19 +98,12 @@ I started with Arduino and embedded systems projects and later moved into full-s
 
 ### Features
 
-✅ Role-Based Authentication
-
-✅ Secure Payment Integration
-
-✅ REST API Architecture
-
-✅ Automated Workflows/Emails
-
-✅ Brevo Email API Integration
-
-✅ User Verification Workflows
-
-✅ Production 
+- Role-Based Authentication
+- Secure Payment Integration
+- REST API Architecture
+- Automated Workflows/Emails
+- Brevo Email API Integration
+- User Verification Workflows
 
 
 🔗 Live Demo:
@@ -131,15 +124,11 @@ Google Apps Script • Google Forms • Google Sheets • JavaScript
 
 ### Features
 
-✅ Workflow Automation
-
-✅ Data Collection
-
-✅ Record Management
-
-✅ Student Service Platform
-
-✅ Google Workspace Integration
+- Workflow Automation
+- Data Collection
+- Record Management
+- Student Service Platform
+- Google Workspace Integration
 
 🔗 Live Demo:
 https://examcenterhelp.netlify.app/
