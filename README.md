@@ -29,10 +29,10 @@ I started with Arduino and embedded systems projects and later moved into full-s
 
 ### Areas of Interest
 
-Full-Stack Development
-Backend Development
-Software Engineering
-Automation
+•Full-Stack Development
+•Backend Development
+•Software Engineering
+•Automation
 
 ---
 
