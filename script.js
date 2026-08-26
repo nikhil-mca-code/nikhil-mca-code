@@ -422,7 +422,7 @@ const terminalLines = [
   '<div class="terminal-line"><span class="prompt">$</span><span class="cmd">curl https://api.nikhil.dev/about</span></div>',
   '<div class="terminal-line"><span class="term-punct">{</span></div>',
   '<div class="terminal-line"><span class="term-key">"name"</span><span class="term-punct">:</span> <span class="term-string">"Nikhil Singh"</span><span class="term-punct">,</span></div>',
-  '<div class="terminal-line"><span class="term-key">"role"</span><span class="term-punct">:</span> <span class="term-string">"Full-Stack Developer"</span><span class="term-punct">,</span></div>',
+  '<div class="terminal-line"><span class="term-key">"role"</span><span class="term-punct">:</span> <span class="term-string">"MCA`28@ G.L. Bajaj | Full-Stack Developer | Founder @ Gorakhpur Web Studio"</span><span class="term-punct">,</span></div>',
   '<div class="terminal-line"><span class="term-key">"location"</span><span class="term-punct">:</span> <span class="term-string">"Gorakhpur, India"</span><span class="term-punct">,</span></div>',
   '<div class="terminal-line"><span class="term-key">"stack"</span><span class="term-punct">:</span> <span class="term-punct">[</span><span class="term-string">"Node.js"</span><span class="term-punct">,</span> <span class="term-string">"Express"</span><span class="term-punct">,</span> <span class="term-string">"MongoDB"</span><span class="term-punct">]</span><span class="term-punct">,</span></div>',
   '<div class="terminal-line"><span class="term-key">"currentProject"</span><span class="term-punct">:</span> <span class="term-string">"Class Orbit"</span><span class="term-punct">,</span></div>',
