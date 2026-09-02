@@ -4,7 +4,7 @@
 
 ### MCA Student @ G.L. Bajaj | Full-Stack Developer | Founder @ Gorakhpur Web Studio
 
-![](https://komarev.com/ghpvc/?username=nikhil-mca-code\&color=blueviolet\&style=for-the-badge)
+![](https://komarev.com/ghpvc/?username=nikhil-zip\&color=blueviolet\&style=for-the-badge)
 [![Website](https://img.shields.io/badge/Website-Nikhil%20Portfolio-0A66C2?style=for-the-badge&logo=google-chrome)](https://nikhil-index.netlify.app/)
 
 </div>
@@ -110,7 +110,7 @@ I started with Arduino and embedded systems projects and later moved into full-s
 https://class-orbit.netlify.app/
 
 🔗 GitHub:
-https://github.com/nikhil-mca-code/class-orbit
+https://github.com/nikhil-zip/class-orbit
 
 ---
 
@@ -181,17 +181,17 @@ https://amzn.in/d/0j6DpKNp
 
 # 📊 GitHub Statistics
 
-![](https://github-readme-stats.vercel.app/api?username=nikhil-mca-code\&show_icons=true\&theme=tokyonight)
+![](https://github-readme-stats.vercel.app/api?username=nikhil-zip\&show_icons=true\&theme=tokyonight)
 
-![](https://github-readme-streak-stats.herokuapp.com/?user=nikhil-mca-code\&theme=tokyonight)
+![](https://github-readme-streak-stats.herokuapp.com/?user=nikhil-zip\&theme=tokyonight)
 
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=nikhil-mca-code\&layout=compact\&theme=tokyonight)
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=nikhil-zip\&layout=compact\&theme=tokyonight)
 
 ---
 
 # 🚀 Featured Repository
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=nikhil-mca-code\&repo=class-orbit\&theme=tokyonight)](https://github.com/nikhil-mca-code/class-orbit)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=nikhil-zip\&repo=class-orbit\&theme=tokyonight)](https://github.com/nikhil-zip/class-orbit)
 
 ---
 
@@ -231,15 +231,15 @@ https://amzn.in/d/0j6DpKNp
 
 # 🌐 Connect With Me
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nikhil%20Singh-blue?style=for-the-badge\&logo=linkedin)](https://www.linkedin.com/in/nikhil-mca-in/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nikhil%20Singh-blue?style=for-the-badge\&logo=linkedin)](https://www.linkedin.com/in/nikhil-zip/)
 
 [![Website](https://img.shields.io/badge/Website-Gorakhpur%20Web%20Studio-success?style=for-the-badge\&logo=google-chrome)](https://gorakhpurwebstudio.in/)
 
 [![Instagram](https://img.shields.io/badge/Instagram-@proxy.nikhil-E4405F?style=for-the-badge\&logo=instagram\&logoColor=white)](https://www.instagram.com/proxy.nikhil/)
 
-[![GitHub](https://img.shields.io/badge/GitHub-nikhil--mca--code-black?style=for-the-badge\&logo=github)](https://github.com/nikhil-mca-code)
+[![GitHub](https://img.shields.io/badge/GitHub-nikhil--mca--code-black?style=for-the-badge\&logo=github)](https://github.com/nikhil-zip)
 
-📧 Email: [nikhil.mca.in@gmail.com](mailto:nikhil.mca.in@gmail.com)
+📧 Email: [nikhilsingh.zip@gmail.com](mailto:nikhilsingh.zip@gmail.com)
 
 ---
 

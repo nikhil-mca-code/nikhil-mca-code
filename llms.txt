@@ -14,9 +14,9 @@ Primary topics:
 Key pages and assets:
 - Home: https://nikhil-index.netlify.app/
 - Resume: https://nikhil-index.netlify.app/assets/Nikhil-resume-FullStack.pdf
-- GitHub: https://github.com/nikhil-mca-code
-- LinkedIn: https://www.linkedin.com/in/nikhil-mca-in
-- Email: nikhil.mca.in@gmail.com
+- GitHub: https://github.com/proxy.nikhil-code
+- LinkedIn: https://www.linkedin.com/in/nikhil-zip
+- Email: nikhilsingh.zip@gmail.com
 
 Featured work:
 - Class Orbit: https://class-orbit.netlify.app/
